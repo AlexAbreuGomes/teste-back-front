@@ -1,3 +1,4 @@
+// carrega o formulário
 // carrega o formulário
 const form = document.getElementById('formCadastro');
 
@@ -9,6 +10,10 @@ form.addEventListener('submit', async(e) => {
     const modelo = document.getElementById('modelo').value;   
     const ano = document.getElementById('ano').value;
 
+    // O método POST é usado para enviar dados para o servidor de forma segura e oculta
+    // Ele é usado quando se deseja enviar informações sensíveis, como por exemplo,
+    // quando se cadastrar um novo usuário, onde os dados do usuário são enviados
+    // para o servidor, que os processa e os armazena em um banco de dados.
     const response = await fetch('/veiculos', {
         method: 'POST',
         headers: {
@@ -18,5 +23,6 @@ form.addEventListener('submit', async(e) => {
         body: JSON.stringify({ marca, modelo, ano }),
     })
     const data = await response.json();
-    console.log('veiculo cadastrado', data);
+    console.log('veículo cadastrado', data);
+    
 })

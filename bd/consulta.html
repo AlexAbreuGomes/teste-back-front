@@ -18,8 +18,9 @@
     <main>
         <section>
             <h2>Veículos Cadastrados</h2>
-            <form action="formConsulta">
-                <button type="submit">Atualizar Lista</button>
+            <form action="formConsulta" id="formConsulta">
+                <input type="text" id="marca" placeholder="Digite a marca">
+                <button type="submit">Buscar Veículos</button>
             </form>
             <table id="tabelaVeiculos">
                 <thead>
@@ -31,11 +32,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- VEIICULOS APARECERAM AQUI-->
+                    <!-- VEÍCULOS APARECERÃO AQUI-->
                 </tbody>
             </table>
         </section>
     </main>
-    <script></script>
+    <script src="consulta.js"></script>
 </body>
 </html>
