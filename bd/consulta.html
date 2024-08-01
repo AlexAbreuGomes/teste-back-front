@@ -18,10 +18,11 @@
     <main>
         <section>
             <h2>Veículos Cadastrados</h2>
-            <form action="formConsulta" id="formConsulta">
-                <input type="text" id="marca" placeholder="Digite a marca">
+            <form id="formConsulta">
+                <input type="text" id="marca" placeholder="Digite a marca" required>
                 <button type="submit">Buscar Veículos</button>
             </form>
+            <div id="mensagemErro" style="color: red; display: none;"></div>
             <table id="tabelaVeiculos">
                 <thead>
                     <tr>
@@ -32,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- VEÍCULOS APARECERÃO AQUI-->
+                    <!-- VEÍCULOS APARECERÃO AQUI -->
                 </tbody>
             </table>
         </section>

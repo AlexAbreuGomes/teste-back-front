@@ -2,8 +2,9 @@
 // carrega o formulário
 const form = document.getElementById('formCadastro');
 
-form.addEventListener('submit', async(e) => {
-    e.preventDefault();
+form.addEventListener('submit', async() => {
+    
+    
 
     // captura os valores do form
     const marca = document.getElementById('marca').value;
@@ -14,7 +15,7 @@ form.addEventListener('submit', async(e) => {
     // Ele é usado quando se deseja enviar informações sensíveis, como por exemplo,
     // quando se cadastrar um novo usuário, onde os dados do usuário são enviados
     // para o servidor, que os processa e os armazena em um banco de dados.
-    const response = await fetch('/veiculos', {
+    const response = await fetch('/cadastraVeiculos', {
         method: 'POST',
         headers: {
             // define o cabeçalho
